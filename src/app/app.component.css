@@ -1,0 +1,15 @@
+main{
+	min-height: 490px;
+	background-color: gray;
+	background-image: url('../assets/images/bg.png');
+	padding: 5px;
+}
+
+footer {
+	background-color: black;
+	color: whitesmoke;
+	padding: 5px;
+	padding-top: 15px;
+	text-align: center;
+	min-height: 42px;
+}

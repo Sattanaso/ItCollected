@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=UTF-8>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ItCollected</title>
+
+  <link href="./favicon.ico" rel="icon">
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link href="assets/css/style-default.css" rel="stylesheet">
+  <link href="assets/css/style-bootstrap.css" rel="stylesheet">
+  <link href="assets/css/style-material.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Polyfill(s) for older browsers -->
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+
+  <base href="/">
+</head>
+
+<body style="background-color: lightgrey">
+
+<app-base>
+  <div id="loading-container">
+    <div id="loading">
+      <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <h2 id="load-h">Loading...</h2>
+  </div>
+</app-base>
+
+<!-- Module loader -->
+<script src="node_modules/systemjs/dist/system.src.js"></script>
+<script src="systemjs.config.js"></script>
+<script>
+  System.import('./app').catch(function (err) { console.error(err); });
+</script>
+
+</body>
+
+</html>

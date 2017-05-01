@@ -1,0 +1,21 @@
+input {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+body {
+	margin: 0;
+}
+
+main {
+	min-height: 490px
+}
+
+div#loading-container{
+	margin-left: 49%;
+	margin-top: 240px;
+}
+
+h2#load-h{
+	margin-left: -25px
+}

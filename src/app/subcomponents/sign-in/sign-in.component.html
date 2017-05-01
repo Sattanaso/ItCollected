@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-6">
+        <img src="../../../assets/images/box-collection.jpg" width="300px" height="300px">
+    </div>
+    <div class="col-md-6">
+        <form (ngSubmit)="signIn()" class="register-form log-form">
+            <h1>SIGN IN</h1>
+
+            <div class="form-group">
+                <label for="tb-username glyphicon glyphicon-user">Username: </label>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input [(ngModel)]="username" name="username" type="text" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tb-passworn">Password: </label>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    <input [(ngModel)]="password" name="password" type="password" class="form-control" required>
+                </div>
+            </div>
+            <button class="btn btn-primary" id="btn-register">Submit</button>
+            <div id="or"><span>or&nbsp;&nbsp;</span><a (click)="goRegister()">SIGN UP</a></div>
+        </form>
+    </div>
+</div>

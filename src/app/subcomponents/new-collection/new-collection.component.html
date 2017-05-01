@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col-md-6">
+		<img src="../../../assets/images/CASSETTE-COLLECTIONS-JIM-GOLDEN.jpg" width="300px" height="300px">
+	</div>
+	<div class="col-md-6">
+		<form (ngSubmit)="addNewCollection()" class="register-form log-form">
+			<h1>NEW COLLECTION</h1>
+			<div class="form-group">
+				<label for="collectionName">Name: </label>
+				<select name="selector" id="selector" [(ngModel)]="collectionStatus">
+					<option value="public">public</option>
+					<option value="protected">protected</option>
+					<option value="private">private</option>
+				</select>
+				<div class="input-group">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+					<input [(ngModel)]="collectionName" name="collectionName" type="text" class="form-control">
+				</div><br>
+				<label for="image">Image (url): </label>
+				<div class="input-group">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+					<input [(ngModel)]="collectionImageUrl" name="collectionImageUrl" type="url" class="form-control">
+				</div><br>
+				<label for="description">Short description: </label>
+				<div class="input-group">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+					<input [(ngModel)]="collectionDescription" name="collectionDescription" type="text" class="form-control">
+				</div><br>
+			</div>
+			<button class="btn btn-primary" id="btn-register">CREATE</button><br>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,59 @@
+form {
+	background-image: url('../../../assets/images/bbg.jpg');
+}
+
+.log-form {
+	margin: 2%;
+	margin-left: 2%;
+	padding: 1%;
+	max-width: 96%;
+	border: 1px solid black;
+	color: black;
+	border-radius: 5px;
+	box-shadow: -3px 3px black;
+	text-shadow: -1px 1px silver;
+}
+
+img {
+	width: 96%;
+	height: 440px;
+	margin-top: 2%;
+	margin-left: 2%;
+	opacity: 0.1;
+}
+
+h1 {
+	text-align: center
+}
+
+label {
+	font-size: 16px
+}
+
+button {
+	display: block;
+	margin: 0 auto;
+	font-size: 20px;
+	font-weight: bold;
+	border: 2px solid silver;
+	box-shadow: -2px 2px silver;
+	color: black;
+	text-shadow: -1px 1px silver;
+	background-color: #808080;
+}
+
+button:hover {
+	background-color: lightgray;
+}
+
+div.input-group {
+	border: 1px solid silver;
+	border-radius: 5px;
+	box-shadow: -2px 2px silver;
+}
+
+input.form-control {
+	min-height: 11px;
+	box-shadow: -2px 2px silver;
+	color: steelblue;
+}

@@ -1,0 +1,89 @@
+img {
+	margin-top: -5px;
+	margin-left:-5px;
+	border: 1px solid whitesmoke;
+}
+
+#home-nav {
+	max-height: 51px;
+	background-color: black;
+	color: whitesmoke;
+	padding: 5px;
+}
+
+ul li a.btn-link.login.profile {
+	max-height: 25px;
+	margin-top: -7px;
+	font-weight: bold;
+	font-size: 26px;
+	background-color: black;
+	color: #7b8389;
+	text-shadow: -1px 1px white;
+}
+
+ul li a.btn-link.login.profile:hover, ul li a.btn-link.login.profile:focus{
+	background-color: black;
+	border: 1px solid black;
+	color: silver;
+	text-shadow: -1px 1px ghostwhite;
+}
+
+ul li img {
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+ul.nav.nav-tabs {
+	margin-left: 5%;
+	margin-top: -2px;
+	border-bottom: 1px solid black;
+}
+
+a {
+	text-decoration: none;
+	font-size: 18px;
+	color: white
+}
+
+a#talk-ico{
+	background-color: black
+}
+
+a#talk-ico:hover{
+	background-color: #444444;
+	border: 1px solid #444444;
+}
+
+a#talk-ico img {
+	margin-top: -11px;
+	border: 1px solid transparent
+}
+
+h1, ul {
+	display: inline-block
+}
+
+h6 {
+	font-weight: bold;
+	position: relative;
+	top: -24px;
+	left: 55px
+}
+
+ul {
+	margin-right: 0px;
+}
+
+.right-object {
+	float: right;
+	margin-right: 5px;
+}
+
+.login {
+	color: white;
+	font-weight: bold;
+}
+
+.login:hover, .login:focus {
+	color: black
+}

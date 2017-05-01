@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-md-6">
+        <img src="../../../assets/images/CASSETTE-COLLECTIONS-JIM-GOLDEN.jpg" width="300px" height="300px">
+    </div>
+    <div class="col-md-6">
+        <form (ngSubmit)="signup()" class="register-form log-form">
+            <h1>SIGN UP</h1>
+
+            <div class="form-group">
+                <label for="username glyphicon glyphicon-user">Username: </label>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input [(ngModel)]="username" name="username" type="text" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="image">Avatar image (url): </label>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input [(ngModel)]="image" name="image" type="url" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail: </label>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                    <input [(ngModel)]="email" name="email" type="email" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="passworn">Password: </label>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    <input [(ngModel)]="password" name="password" type="password" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="passworn-confirm">Confirm Password: </label>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    <input [(ngModel)]="passwordConfirm" name="passwordConfirm" type="password" class="form-control" required>
+                </div>
+            </div>
+            <button class="btn btn-primary" id="btn-register">Submit</button>
+        </form>
+    </div>
+</div>

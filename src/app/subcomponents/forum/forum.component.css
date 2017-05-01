@@ -1,0 +1,59 @@
+.container-fluid {
+	margin-top: 20px;
+}
+
+.term-definition {
+	margin-top: -9px;
+}
+
+main {
+	background-color: whitesmoke;
+	min-height: 420px;
+}
+
+li {
+	 list-style-type: none;
+}
+
+.search {
+	margin-top: -9px;
+}
+
+.items-list {
+	min-height: 360px;
+	max-height: 360px;
+	border: 1px solid lightgrey;
+	background-color: ghostwhite;
+	margin-top: 11px;
+	font-size: 18px;
+	/*overflow: scroll;*/
+}
+
+.form-label {
+	float: right;
+	margin-right: 10px;
+	max-height: 20px;
+	font-size: 14px;
+	text-align: center
+}
+
+.text {
+	border: 1px solid lightgrey;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 360px;
+	max-height: 360px;
+	font-size: 22px;
+	color: steelblue;
+}
+
+.terms {
+	margin: 2px;
+	font-size: 18px;
+	color: steelblue;
+}
+
+.terms:hover {
+	font-size: 22px;
+	font-weight: bold;
+}

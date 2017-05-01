@@ -1,0 +1,40 @@
+<div class="container-fluid">
+	<div class="row content">
+
+		<div class="col-sm-8">
+
+			<div class="term-definition">
+				<div class="text">
+					<ul>
+						<li>
+							{{message}}<br>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<form (ngSubmit)="pushMessage()">
+				<label for="chat-input">&gt;&gt;&nbsp;{{idAttrUsername}}:</label>
+				<input [(ngModel)]="message" name="message" type="text" id="chat-input">
+				<button type="submit">Say</button>
+			</form>
+		</div>
+		
+		<div class="col-sm-4">
+			<div class="input-group search">
+				<input type="text" class="form-control" placeholder="User search...">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</span>
+			</div>
+			<ul id="terms" class="nav nav-pills nav-stacked items-list">
+				<li class="terms" *ngFor="let item of users">
+					<a (click)="onClick($event)" id="{{item.userName}}" *ngIf="item.userName !== auth.getUsername()">{{item.userName}}</a>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+</div>

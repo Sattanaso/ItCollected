@@ -1,0 +1,47 @@
+<div id="main-container" (mouseenter)="getUsername()">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card hovercard">
+					<div class="cardheader">
+						<img alt="bg image" src="{{backgroundImageUrl}}" width="300px" height="170px">
+					</div>
+					<div class="avatar">
+						<img alt="avatar image" src="{{avatarImageUrl}}">
+					</div>
+					<div class="info">
+						<div class="title">
+							<a>{{username}}</a>
+						</div>
+						<div id="profile-email" class="desc"><span>{{email}}</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="collectins-container">
+				</div>
+				<div id="home-collections" *ngFor="let collection of collections">
+					<div *ngIf="collection.owner === auth.getUsername()" class="logoContainerHome">
+						<div class="logoForNow">
+							<img src="{{collection.imageUrl}}" alt="{{collection.name}}" class="logoImgHome" />
+						</div>
+						<div (click)="onClick($event)" class="imgDescription" id="{{collection.name}}">
+							<a class="logoLink">
+								<div class="homeImgContent">
+									<h2>{{collection.name}}</h2><br/>
+									<div class="logo-description">{{collection.description}}</div>
+								</div>
+								<br>
+								<div *ngIf="!collection.isPrivate && !collection.isProtected"><span class="label label-success">public</span></div>
+								<div *ngIf="collection.isProtected"><span class="label label-warning">protected</span></div>
+								<div *ngIf="collection.isPrivate"><span class="label label-danger">private</span></div><br>
+								<div id="user-info">Created on {{collection.creationDate | date:'dd/MMM/yyyy'}} <br> by <a>{{collection.owner}}</a></div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

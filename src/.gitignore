@@ -1,0 +1,3 @@
+*.js.map
+app/*.js.map
+app/**/*.js.map

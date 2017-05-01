@@ -1,0 +1,34 @@
+<div class="container">
+	<div>
+		<h1 id="home-title-name">Find or create a collection!</h1>
+	</div>
+	<div>
+		<h4><span class="label label-info">Last added collections</span></h4>
+	</div>
+	<div id="home-collections" *ngFor="let collection of collections">
+		<div *ngIf="!collection.isPrivate" class="logoContainerHome">
+			<div class="logoForNow">
+				<img src="{{collection.imageUrl}}" alt="{{collection.name}}" class="logoImgHome" />
+			</div>
+			<div (click)="onClick($event)" class="imgDescription" id="{{collection.name}}">
+				<a class="logoLink">
+					<div class="homeImgContent">
+						<h2>{{collection.name}}</h2><br/>
+						<div class="logo-description">{{collection.description}}</div>
+					</div>
+					<br>
+					<div *ngIf="!collection.isProtected"><span class="label label-success">public</span></div>
+					<div *ngIf="collection.isProtected"><span class="label label-warning">protected</span></div><br>
+					<div id="user-info">Created on {{collection.creationDate | date:'dd/MMM/yyyy'}} <br> by <a>{{collection.owner}}</a></div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<br><br>
+	<div *ngIf="!auth.isLogged()" id="home-signup">
+		<h3><a class="signin" [routerLink]="['/sign-in']">SIGN IN</a><span>&nbsp;or&nbsp;</span><a [routerLink]="['/sign-up']">SIGN UP</a></h3>
+	</div>
+	<div *ngIf="auth.isLogged()" id="home-newcollection">
+		<h3><a id="info" class="signin" [routerLink]="['/new-collection']">NEW COLLECTION</a></h3>
+	</div>
+</div>

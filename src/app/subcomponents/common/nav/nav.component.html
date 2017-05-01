@@ -1,0 +1,84 @@
+<nav id="home-nav" class="navbar-inverse navbar-static-top navbar-inv">
+	<div class="navbar-header">
+		<span title="Home">
+				<a [routerLink]="['/']">
+					<img src="../../../../assets/images/logo.png" width="210px" height="52px">
+				</a>
+		</span>
+		<button class="btn navbar-toggle" data-toggle="collapse" data-target=".js-navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+		</button>
+	</div>
+
+	<div class="collapse navbar-collapse js-navbar-collapse">
+		<ul class="nav nav-navbar nav-tabs">
+			<li title="All Collections" role="presentation">
+				<a class="btn" [routerLink]="['/all-collections']">
+					<i class="glyphicon glyphicon-th"></i>
+				</a>
+			</li>
+			<li title="My Collections" role="presentation">
+				<a class="btn" [routerLink]="['/my-collections']">
+					<i class="glyphicon glyphicon-th-large"></i>
+				</a>
+			</li>
+			<li title="Current Collection" role="presentation">
+				<a class="btn" [routerLink]="['/dict']">
+					<i class="glyphicon glyphicon-th-list"></i>
+				</a>
+			</li>
+			<li title="Download as PDF" role="presentation">
+				<a class="btn" [routerLink]="['/download']">
+					<i class="glyphicon glyphicon-download-alt"></i>
+				</a>
+			</li>
+		</ul>
+		<ul class="nav nav-tabs">
+			<li title="Chat" role="presentation">
+				<a id="talk-ico" class="btn" [routerLink]="['/forum']">
+					<img src="../../../../../assets/images/talk2.png" width="30px">
+				</a>
+			</li>
+			<li title="Profile" role="presentation">
+				<a *ngIf="auth.isLogged()" class="btn-link login profile" [routerLink]="['/profile']">
+					{{auth.getUsername()}}
+				</a>
+			</li>
+		</ul>
+		<ul class="nav nav-tabs right-object">
+			<li title="Rules" role="presentation">
+				<a class="btn" [routerLink]="['/rules']">
+					<i class="glyphicon glyphicon-flag"></i>
+				</a>
+			</li>
+			<li title="Contact Us" role="presentation">
+				<a class="btn" [routerLink]="['/contact-us']">
+					<i class="glyphicon glyphicon-envelope"></i>
+				</a>
+			</li>
+			<!--<li title="Home" role="presentation">
+			<a class="btn" [routerLink]="['/home']">
+				<i class="glyphicon glyphicon-home"></i>
+			</a>
+		</li>-->
+			<li title="New User" role="presentation">
+				<a *ngIf="!auth.isLogged()" class="btn" [routerLink]="['/sign-up']">
+					<i class="glyphicon glyphicon-user"></i>
+				</a>
+			</li>
+			<li role="presentation">
+				<a *ngIf="!auth.isLogged()" class="btn-link login" [routerLink]="['/sign-in']">
+					SIGN IN
+			</a>
+			</li>
+			<li role="presentation">
+				<a *ngIf="auth.isLogged()" class="btn-link login" (click)="logOut()" [routerLink]="['/home']">
+					SIGN OUT
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
